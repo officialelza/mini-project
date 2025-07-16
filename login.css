@@ -1,0 +1,97 @@
+/* ========== Reset & Base ========== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: #E1D9C1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* ========== Container ========== */
+.login-container {
+  background: #fef6ba;
+  padding: 2rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 360px;
+}
+
+/* ========== Logo & Heading ========== */
+.logo {
+  display: block;
+  margin: 0 auto 1rem;
+  max-width: 200px;
+}
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* ========== Form Fields ========== */
+.login-container label {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: #555;
+  font-size: 0.9rem;
+}
+.login-container input[type="email"],
+.login-container input[type="password"] {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* ========== Links ========== */
+.links {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.links a {
+  display: block;
+  font-size: 0.85rem;
+  color: #0073e6;
+  text-decoration: none;
+  margin: 0.25rem 0;
+}
+.links a:hover {
+  text-decoration: underline;
+}
+
+/* ========== Buttons ========== */
+.buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+.buttons button {
+  flex: 1;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.buttons button[type="submit"] {
+  background: #776414;
+  color: #fff;
+}
+.buttons button[type="reset"] {
+  background: #440f0b;
+  color: #fff;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 400px) {
+  .buttons {
+    flex-direction: column;
+  }
+}

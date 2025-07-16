@@ -1,0 +1,119 @@
+
+:root {
+  --primary-accent: #EFBB14;
+  --deep-brown: #985D09;
+  --secondary-accent: #CE933A;
+  --bright-gold: #EFA800;
+  --dark-text: #392105;
+  --soft-bg: #E1D9C1;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: var(--soft-bg);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--deep-brown);
+  color: #fff;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.nav-links a {
+  color: #fff;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: var(--bright-gold);
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.tagline {
+  font-size: 2.5rem;
+  color: var(--dark-text);
+  margin-bottom: 2rem;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+}
+
+.search-box input {
+  padding: 0.8rem 1rem;
+  width: 300px;
+  border: 2px solid var(--secondary-accent);
+  border-radius: 8px 0 0 8px;
+  font-size: 1rem;
+}
+
+.search-box button {
+  background-color: var(--primary-accent);
+  border: none;
+  padding: 0 1rem;
+  font-size: 1.2rem;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  color: #fff;
+}
+
+.search-box button:hover {
+  background-color: var(--bright-gold);
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 3rem 1rem;
+  flex-wrap: wrap;
+}
+
+.category-icon {
+  text-align: center;
+  background-color: #fff;
+  border: 2px solid var(--primary-accent);
+  padding: 1rem;
+  border-radius: 12px;
+  width: 100px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.category-icon:hover {
+  background-color: var(--primary-accent);
+  color: #fff;
+  border-color: var(--bright-gold);
+}
+
+.category-icon p {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--dark-text);
+}
+.welcome {
+  font-size: 1.5rem;
+  color: #392105;
+  margin-top: 1rem;
+}
+
+.welcome span {
+  font-weight: bold;
+}

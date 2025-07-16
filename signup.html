@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up | HiveMind</title>
+  <link rel="icon" href="logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="signup_hivemind.css" />
+</head>
+<body>
+
+  <form action="signup.php" method="POST" class="signup-form" name="signup_form">
+    <h1>Create Your Account</h1>
+
+    <label for="full_name">Name</label>
+    <input type="text" id="full_name" name="full_name"
+           placeholder="Your full name" required minlength="5"/>
+
+    <label for="dob">Date of Birth</label>
+    <input type="date" id="dob" name="dob" required
+    min="1925-01-01"
+    max="2012-12-31"/>
+
+    <label for="phone_number">Phone Number</label>
+    <input type="number" id="phone_number" name="phone_number"
+           placeholder="e.g. +1234567890"
+           pattern="^\+?\d{7,15}$"
+           title="Include country code, digits only"
+           required/>
+
+    <div class="card-radio-wrapper">
+      <p>Select Gender</p>
+      <div class="card-radio-container">
+        <input type="radio" id="gender-male" name="gender" value="Male" required>
+        <label for="gender-male" class="card-radio">Male 🧔‍♂️</label>
+
+        <input type="radio" id="gender-female" name="gender" value="Female">
+        <label for="gender-female" class="card-radio">Female 👩</label>
+      </div>
+    </div>
+
+
+    <div class="card-radio-wrapper">
+      <p>Select Role</p>
+      <div class="card-radio-container">
+        <input type="radio" id="role-expert" name="role" value="expert" required>
+        <label for="role-expert" class="card-radio">👩‍🏫 Expert</label>
+
+        <input type="radio" id="role-learner" name="role" value="learner">
+        <label for="role-learner" class="card-radio">📚 Learner</label>
+      </div>
+    </div>
+
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email"
+           placeholder="you@example.com" required/>
+
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password"
+           placeholder="Minimum 8 characters" 
+           required minlength="8"
+           pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}"
+           title="Must include UPPERCASE, lowercase, number & symbol"/>
+
+    <label for="confirm_password">Confirm Password</label>
+    <input type="password" id="confirm_password" name="confirm_password"
+           placeholder="Re-enter your password" 
+           required minlength="8"
+           pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}"
+           title="Must include UPPERCASE, lowercase, number & symbol"/>
+
+    <div class="checkbox-group">
+      <label>
+        <input type="checkbox" name="terms" required/>
+        I agree to the <a href="terms.html">terms and conditions</a>
+      </label>
+    </div>
+
+    <button type="submit">Sign Up</button>
+     <br>
+     <br>
+     <button type="reset" onclick="window.location.href='login.html'">Cancel</button>
+  </form>
+
+  <script>
+    // Simple client-side password match check
+    const form = document.querySelector('.signup-form');
+    form.addEventListener('submit', e => {
+      const pw = form.password.value;
+      const cpw = form.confirm_password.value;
+      if (pw !== cpw) {
+        e.preventDefault();
+        alert('Passwords do not match!');
+      }
+    });
+  </script>
+
+</body>
+</html>

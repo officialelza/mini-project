@@ -1,0 +1,151 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background: #E1D9C1;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.signup-form {
+  background: #fef6ba;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 420px;
+}
+
+.signup-form h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #985D09;
+}
+
+.signup-form label {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: #392105;
+  font-size: 0.9rem;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"],
+.signup-form input[type="date"],
+.signup-form input[type="number"] {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #CE933A;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.signup-form .checkbox-group {
+  margin-bottom: 1rem;
+}
+
+.signup-form .checkbox-group label {
+  display: inline-block;
+  margin-right: 1rem;
+  font-size: 0.9rem;
+  color: #392105;
+}
+
+.signup-form input[type="radio"],
+.signup-form input[type="checkbox"] {
+  margin-right: 0.25rem;
+}
+
+.signup-form button {
+  width: 48%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.signup-form button[type="submit"] {
+  background: #EFBB14;
+  color: #fff;
+  margin-right: 4%;
+}
+
+.signup-form button[type="submit"]:hover {
+  background: #EFA800;
+}
+
+.signup-form button[type="reset"] {
+  background: #985D09;
+  color: #fff;
+}
+
+.signup-form button[type="reset"]:hover {
+  background: #CE933A;
+}
+
+@media (max-width: 480px) {
+  .signup-form button {
+    width: 100%;
+    margin: 0 0 0.5rem;
+  }
+}
+.card-radio-wrapper {
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.card-radio-wrapper p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #392105;
+  margin-bottom: 1rem;
+}
+
+.card-radio-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 300px;
+  margin: auto;
+}
+
+.card-radio-container input[type="radio"] {
+  display: none;
+}
+
+.card-radio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #E1D9C1;
+  border: 2px solid transparent;
+  padding: 1rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  color: #392105;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.card-radio:hover {
+  border-color: #CE933A;
+}
+
+input[type="radio"]:checked + .card-radio {
+  background-color: #EFBB14;
+  color: white;
+  border-color: #EFA800;
+}
+
